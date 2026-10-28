@@ -46,3 +46,15 @@ npm run build
 ```
 
 `npm run build`는 배포용 파일을 `dist` 폴더에 만듭니다.
+
+## GitHub Pages 배포
+
+공개 주소: https://kimsangwoo0101.github.io/my-portfolio/
+
+저장소의 Pages 소스는 GitHub Actions를 사용합니다. `main`에 변경 사항을 올리면
+`.github/workflows/deploy-pages.yml`이 Node.js 24에서 의존성 설치, 린트, 빌드 후 배포합니다.
+Actions의 **Deploy GitHub Pages**에서 수동 실행할 수도 있습니다.
+
+`vite.config.js`의 `base`는 저장소 경로인 `/my-portfolio/`입니다.
+로컬 개발 서버에서도 터미널에 표시되는 이 경로를 사용합니다.
+저장소 이름이 바뀌면 `base`와 위 공개 주소도 함께 변경합니다.
